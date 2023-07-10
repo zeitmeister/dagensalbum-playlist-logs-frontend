@@ -23,6 +23,7 @@ router.post('/logs', (request: Request, response: Response) => {
   });
 
   router.get('/logs', (request: Request, response: Response) => {
+      console.log('i suppose we dont see this');
       response.render('./renderings/index.pug', {logs})
   });
 
