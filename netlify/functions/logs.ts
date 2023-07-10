@@ -37,6 +37,8 @@ router.get('*', function (req: Request, res: Response) {
     });
 });
 
+app.use('/logs', router);
+
 
 
 export const handler = serverless(app);
