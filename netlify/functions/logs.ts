@@ -13,7 +13,7 @@ const router = Router();
 
 // Setup routes
 
-router.post('/', (request: Request, response: Response) => {
+router.post('/post', (request: Request, response: Response) => {
     try {
         console.log(request.body);
         logs.push(request.body.log);
@@ -22,7 +22,7 @@ router.post('/', (request: Request, response: Response) => {
     }
   });
 
-  router.get('/', (request: Request, response: Response) => {
+  router.get('/get', (request: Request, response: Response) => {
       console.log('i suppose we dont see this');
       
       response.render('./renderings/index.pug', {logs})
