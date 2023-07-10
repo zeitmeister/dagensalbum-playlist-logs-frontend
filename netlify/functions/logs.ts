@@ -31,6 +31,7 @@ router.post('/', (request: Request, response: Response) => {
 
 // 404 everything else.
 router.get('*', function (req: Request, res: Response) {
+    console.log('hello 404 stuff');
     res.status(404).json({
         errorCode: 'not-found',
         message: 'No matching route found',
