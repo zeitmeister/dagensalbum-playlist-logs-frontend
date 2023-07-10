@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from 'express';
 import serverless from 'serverless-http';
 
 const logs:string[] = [];
-console.log('The Frontend shit is running Service Running!');
+console.log('The Frontend function shit is running!');
 
 const app = express();
 app.set('trust proxy', true);
@@ -23,6 +23,8 @@ router.post('/', (request: Request, response: Response) => {
   });
 
   router.get('/', (request: Request, response: Response) => {
+      console.log('i suppose we dont see this');
+      
       response.render('./renderings/index.pug', {logs})
   });
 
