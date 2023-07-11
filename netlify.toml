@@ -2,7 +2,11 @@
   external_node_modules = ["express"]
   node_bundler = "esbuild"
 [[redirects]]
-  force = true
-  from = "/logs/*"
+  from = "/logs"
+  to = "/.netlify/functions/logs"
   status = 200
+
+[[redirects]]
+  from = "/logs/*"
   to = "/.netlify/functions/logs/:splat"
+  status = 200
